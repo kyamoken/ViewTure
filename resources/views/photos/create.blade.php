@@ -2,7 +2,7 @@
 
 <x-app-layout>
     <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">画像投稿</h1>
+        <h1 class="text-2xl font-bold mb-4 text-white">画像投稿</h1>
 
         @if ($errors->any())
             <div class="mb-4">
@@ -17,15 +17,15 @@
         <form action="{{ route('photos.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-4">
-                <label for="title" class="block text-lg">タイトル</label>
+                <label for="title" class="block text-lg text-white">タイトル</label>
                 <input type="text" name="title" id="title" value="{{ old('title') }}" required
                        class="w-full p-2 border rounded">
             </div>
 
             <div class="mb-4">
-                <label for="image" class="block text-lg">画像ファイル</label>
+                <label for="image" class="block text-lg text-white">画像ファイル</label>
                 <input type="file" name="image" id="image" accept="image/*" required
-                       class="w-full p-2 border rounded">
+                       class="w-full p-2 border rounded text-white">
             </div>
 
             <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">投稿</button>
