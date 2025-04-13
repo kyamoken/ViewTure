@@ -122,5 +122,16 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+    /*
+    |--------------------------------------------------------------------------
+    | Package Service Providers
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register package service providers for your
+    | application. These providers are loaded automatically by the
+    | framework.
+    |
+    */
+
 
 ];
