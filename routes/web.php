@@ -5,7 +5,7 @@ use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/photos');
 });
 
 Route::get('/dashboard', function () {
