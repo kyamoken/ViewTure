@@ -9,7 +9,6 @@ use GuzzleHttp\Client;
 
 class PhotoController extends Controller
 {
-    // 画像投稿フォームを表示するメソッド
     public function create()
     {
         return view('photos.create');
@@ -20,7 +19,6 @@ class PhotoController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            // アップロード上限は8MB（必要に応じて調整）
             'image' => 'required|image|mimes:jpg,png,jpeg,gif|max:8192',
         ]);
 

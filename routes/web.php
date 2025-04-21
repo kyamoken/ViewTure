@@ -5,13 +5,8 @@ use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect('/photos');
+    return view('welcome');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 // 認証済みユーザー専用のルート
 Route::middleware('auth')->group(function () {
     // プロフィール関連
