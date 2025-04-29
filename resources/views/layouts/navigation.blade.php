@@ -10,7 +10,7 @@
                     </a>
                 </div>
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('photos.index')" :active="request()->routeIs('photos.index')">
                         {{ __('写真一覧') }}
                     </x-nav-link>
@@ -21,7 +21,7 @@
             </div>
             <!-- Authentication Links -->
             @auth
-                <div class="hidden sm:flex sm:items-center sm:ms-6">
+                <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button
@@ -29,7 +29,7 @@
                                        text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300
                                        focus:outline-none transition ease-in-out duration-150">
                                 <div>{{ Auth::user()->name }}</div>
-                                <div class="ms-1">
+                                <div class="ml-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0
@@ -57,7 +57,7 @@
             @endauth
 
             @guest
-                <div class="hidden sm:flex sm:items-center sm:ms-6 space-x-4">
+                <div class="hidden sm:flex sm:items-center sm:ml-6 space-x-4">
                     <a href="{{ route('login') }}"
                        class="text-sm text-gray-500 dark:text-gray-400 hover:underline">
                         {{ __('Login') }}
@@ -70,7 +70,7 @@
             @endguest
 
             <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
+            <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500
                                hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900
